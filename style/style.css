@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+    background-color: #201A31;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+#form{
+    background-color: #302546;
+    width: 40vw;
+    height: 80vh;
+    padding: 1vw;
+    border-radius: 3%;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    margin-top: 4vh;
+}
+
+#first-form {
+    width: 40vw;
+    height: 80vh;
+}
+
+#sec-form{
+    position: absolute;
+    left: 50.5vw;
+    display: none;
+}
+
+input {
+    background-color: #534476;
+    border: none;
+    border-radius: 10px;
+    padding: 1vw;
+    width: 10vw;
+    display: block;
+    margin-bottom: 2vh;
+}
+
+h1 {
+    color: #30F4A6;
+    margin-left: 6vw;
+}
+
+img{
+    width: 37vw;
+    margin-left: 2vw;
+}
+
+label {
+    color: whitesmoke;
+}
+
+h2 {
+    color: #30F4A6;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4em
+}
+
+.radio {
+    display: inline;
+    margin: 0;
+    width: 15px;
+    margin-left: 1vw;
+    accent-color: #30F4A6;
+}
+
+button {
+    background-color: #30F4A6;
+    border: none;
+    border-radius: 3px;
+    padding-top: 5px;
+    margin-top: 5vh;
+    box-shadow: 0 0 1em #30f4a646;
+    height: 5vh;
+    color: #302546;
+}
+
+#next {
+    margin-left: 37vw;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 3vw 30vw;
+}
+
+#enviar {
+    margin-left: 5vw;
+}
+
