@@ -39,12 +39,14 @@ input {
     padding: 1vw;
     width: 10vw;
     display: block;
+    color: whitesmoke;
     margin-bottom: 2vh;
 }
 
 h1 {
     color: #30F4A6;
     margin-left: 6vw;
+    text-shadow: 0 0 1em #30f4a68a;
 }
 
 img{
@@ -52,15 +54,12 @@ img{
     margin-left: 2vw;
 }
 
-label {
-    color: whitesmoke;
-}
-
 h2 {
     color: #30F4A6;
     margin-left: auto;
     margin-right: auto;
-    width: 4em
+    width: 4em;
+    text-shadow: 0 0 1em #30f4a68a;
 }
 
 .radio {
@@ -76,7 +75,7 @@ button {
     border: none;
     border-radius: 3px;
     padding-top: 5px;
-    margin-top: 5vh;
+    margin-top: 2vh;
     box-shadow: 0 0 1em #30f4a646;
     height: 5vh;
     color: #302546;
@@ -89,9 +88,41 @@ button {
 #buttons {
     display: grid;
     grid-template-columns: 3vw 30vw;
+    margin-top: 15vh;
 }
 
 #enviar {
     margin-left: 5vw;
 }
 
+#form-backbone {
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+}
+
+label {
+    color: whitesmoke;
+}
+
+table {
+    text-align: center;
+    background:#fafafa ;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  tr:nth-child(even) {
+    background:#30F4A6;
+  }
+
+#sec {
+    margin-top: 12vh;
+}
+
+#result {
+    margin-top: 5vh;
+}
+
+table {
+    border-radius: 15px;
+}

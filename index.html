@@ -15,37 +15,17 @@
         </div>
         <div id="sec-form">
             <div id="form">
-                <h2>2DADOS</h2>
-                <label for="">Número de pavimentos: </label>
-                <input type="number">
-                <label for="">Número de pontos de conexão de rede: </label>
-                <input type="number">
-                <div>
-                    <label for="">Categoria do cabo: </label>
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">5</label></div>
-                    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">5e</label></div>
-                    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">6</label></div>
-    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">6a</label></div>
-    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">7a</label></div>                
-                </div>
-    
-                <div>
-                    <label for="">Existência de backbone: </label>
-                    <div><input class="radio" type="radio" name="backbone" value="">
-                    <label for="">Sim</label></div>
-    
-                    <div><input class="radio" type="radio" name="backbone" value="">
-                    <label for="">Não</label></div>
-                </div>
+                <h2>DADOS</h2>
+
+                <div id="sec"><label for="">Quantidade de fibras do cabo óptico: </label>
+                    <input type="number" id="n-fibras" min="1">
+                    <label for="">Medida básica do lance de cabo de malha horizontal: </label>
+                    <input type="number" id="m-mh" min="1" >
+                    <label for="">Número de pontos de conexão de rede por pavimento: </label>
+                    <input type="number" id="n-pontos" min="1"></div>
+
+                
+
                 <div id="buttons">
                     <button id="back"><svg
                         width="24"
@@ -59,7 +39,7 @@
                           fill="#302546"
                         />
                     </svg></button>
-                    <button id="enviar"><strong>ENVIAR</strong></button>
+                    <button id="enviar" onclick="createTable()"><strong>ENVIAR</strong></button>
                 </div>
                 
             </div>
@@ -68,43 +48,40 @@
             <div id="form">
                 <h2>DADOS</h2>
                 <label for="">Número de pavimentos: </label>
-                <input type="number">
-                <label for="">Número de pontos de conexão de rede: </label>
-                <input type="number">
-                <div>
-                    <label for="">Categoria do cabo: </label>
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">5</label></div>
-                    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">5e</label></div>
-                    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">6</label></div>
-    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">6a</label></div>
-    
-                    <div><input class="radio" type="radio" name="Categoria" value="">
-                    <label for="">7a</label></div>                
+                <input type="number" id="n-pavimentos" min="1">
+                <label for="">Altura dos pavimentos em metros: </label>
+                <input type="number" id="m-pavimentos" min="1">
+                <label for="">Categoria do cabo de Par Trançado: </label>
+                <input type="text" id="cat-cabo" >
+                
+                <div id="form-backbone">
+                    <div>
+                        <label for="">Existência de backbone: </label>
+                        <div><input class="radio" type="radio" name="backbone" value="sim" id="backbone-first-sim">
+                        <label for="">Sim</label></div>
+        
+                        <div><input class="radio" type="radio" name="backbone" value="nao" id="backbone-first-nao">
+                        <label for="">Não</label></div>
+                    </div>
+                    <div id="backbone-sec">
+                        <label for="">Existência de secundário: </label>
+                        <div><input class="radio" type="radio" name="backbone-sec" value="sim" id="backbone-sec-sim">
+                        <label for="">Sim</label></div>
+        
+                        <div><input class="radio" type="radio" name="backbone-sec" value="nao" id="backbone-sec-nao" checked>
+                        <label for="">Não</label></div>
+                    </div>
                 </div>
-    
-                <div>
-                    <label for="">Existência de backbone: </label>
-                    <div><input class="radio" type="radio" name="backbone" value="">
-                    <label for="">Sim</label></div>
-    
-                    <div><input class="radio" type="radio" name="backbone" value="">
-                    <label for="">Não</label></div>
-                </div>
-    
+
+                <label for="">Categoria do cabo óptico: </label>
+                <input type="text" id="cat-optico">
+
                 <button id="next"><svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
                       fill="#302546"
@@ -114,6 +91,8 @@
             </div>
         </div>
     </main>
+    <div id="result"></div>
     <script src="js/style.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
